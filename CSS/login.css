@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url("https://img.freepik.com/free-photo/sunny-meadow-landscape_1112-307.jpg?w=1060&t=st=1680024156~exp=1680024756~hmac=11c16fba58265c467a6a214d979f920f2ece39b870bbd26e73fe5938ebf81eae") no-repeat;
+    background-size: cover;
+    /* background-position: center;
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%); */
+        
+    /* animation: animateBg 40s linear infinite; */
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo{
+    font-size: 4em;
+    color: #3109fb;
+    user-select: none;
+    margin-left: -80px;
+    font-family: 'Lobster', cursive;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #0733fb;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    top: -10%;
+    cursor: pointer;
+    left: 50px;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .2s;
+}
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+@keyframes animateBg{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+.login-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    left: 0px;
+    background: transparent;
+    border: 2px solid rgba(16, 122, 29, 0.5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    
+}
+
+
+
+.login-box h2{
+    font-size: 2em;
+    color: #077923;
+    text-align: center;
+    vertical-align: text-top;
+}
+
+
+
+.input-box{
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid #3c6405;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #05671b;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #169b25;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    color: #0c821a;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+.remember-forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #0c821a;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forget label input{
+    margin-right: 3px;
+}
+.remember-forget a{
+    color:#0c821a;
+    text-decoration: none;
+}
+.remember-forget a:hover{
+    text-decoration: underline;
+    color:#fff
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    background: #a4e482;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #f73113;
+    font-weight: 500;
+}
+.login-register{
+    font-size: .9em;
+    color: #0c821a;
+    text-align: center;
+    margin: 25px 0 10px;
+    font-weight: 500;
+}
+.login-register p a{
+    color: #3b06fa;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+    color:rgba(234, 40, 11, 0.5)
+}
+
+@media (max-width: 360px){
+    .login-box{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+    .input-box{
+        width: 290px;
+    }
+}
+
