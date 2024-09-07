@@ -11,7 +11,7 @@
     $dated="";
     $image="";
     $farmer_id=$_SESSION['id'];
-    
+    // hi this is my project and checking for changes
  
     if(isset($_POST['add'])){
        // $id=$_POST['id'];
